@@ -127,9 +127,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 6135
-        width: 1755
-        height: 2133
+        y: 6123
+        width: 1550
+        height: 2134
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dde025825c14f4c079ee149339ef0d88
-      internalID: 294129676
+      spriteID: 0ca1e312f04c14fdbb828427ed466c0d
+      internalID: -1535332986
       vertices: []
       indices: 
       edges: []
@@ -147,51 +147,9 @@ TextureImporter:
       name: blythe-2_1
       rect:
         serializedVersion: 2
-        x: 1683
-        y: 6135
-        width: 1555
-        height: 2133
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c630c68408c04e8d9dd37bb6a8f90fc
-      internalID: 567459344
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blythe-2_2
-      rect:
-        serializedVersion: 2
-        x: 3226
-        y: 6184
-        width: 1507
-        height: 2084
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0731efe6ec6e4406295eb3853c57ca22
-      internalID: 1890969511
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blythe-2_3
-      rect:
-        serializedVersion: 2
-        x: 4829
+        x: 1514
         y: 6111
-        width: 1616
+        width: 1664
         height: 2157
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -200,8 +158,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb651c3a251e94cb989560bf6c3fcac4
-      internalID: -1991800058
+      spriteID: e382cda0212494f7088e356ccfb60d98
+      internalID: -446799320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blythe-2_2
+      rect:
+        serializedVersion: 2
+        x: 3178
+        y: 6196
+        width: 1603
+        height: 2072
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41bb847a8ebc0449aa8c822dcc3ef21b
+      internalID: -461938542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blythe-2_3
+      rect:
+        serializedVersion: 2
+        x: 4817
+        y: 6184
+        width: 1604
+        height: 2084
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b53d1b18e7b24c49a0851364a3b37c5
+      internalID: -1142271953
       vertices: []
       indices: 
       edges: []
@@ -210,10 +210,10 @@ TextureImporter:
       name: blythe-2_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 4110
-        width: 1574
-        height: 2061
+        x: 43
+        y: 4074
+        width: 1628
+        height: 2085
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e9b5b1ad4b0744c4832bee46f22272f
-      internalID: 1031120373
+      spriteID: 0650589a9c8794fd999e95285fe2add3
+      internalID: 1521865065
       vertices: []
       indices: 
       edges: []
@@ -231,10 +231,10 @@ TextureImporter:
       name: blythe-2_5
       rect:
         serializedVersion: 2
-        x: 1586
-        y: 4134
-        width: 1580
-        height: 2074
+        x: 1671
+        y: 4086
+        width: 1567
+        height: 2001
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aec477e5a3ec341c78868171bdc3631f
-      internalID: 2051126824
+      spriteID: 33642f73e42ba4bad8d695512ba2e137
+      internalID: 441038938
       vertices: []
       indices: 
       edges: []
@@ -252,10 +252,10 @@ TextureImporter:
       name: blythe-2_6
       rect:
         serializedVersion: 2
-        x: 3226
-        y: 4134
-        width: 1615
-        height: 2037
+        x: 3238
+        y: 4062
+        width: 1616
+        height: 2097
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,8 +263,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2d66920ab8a44a6ea8775aaf7307606
-      internalID: -641419316
+      spriteID: fe61f9faecd0b40028ffb034702a59c1
+      internalID: 1248866952
       vertices: []
       indices: 
       edges: []
@@ -273,10 +273,10 @@ TextureImporter:
       name: blythe-2_7
       rect:
         serializedVersion: 2
-        x: 4866
-        y: 4110
-        width: 1603
-        height: 1941
+        x: 4805
+        y: 4086
+        width: 1616
+        height: 2061
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,8 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8095f6f3bea394e8d94825f120306594
-      internalID: 1973028208
+      spriteID: ae63b0b8d61d246e78db9c60efe857fa
+      internalID: -705359222
       vertices: []
       indices: 
       edges: []
@@ -295,9 +295,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2072
-        width: 1562
-        height: 2062
+        y: 2036
+        width: 1598
+        height: 2074
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,8 +305,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ad5c2b07f3664f6f953a2f266e6126d
-      internalID: 924234778
+      spriteID: 8e137993bfc1d47a89e1c98cd6a86ea0
+      internalID: 1772161198
       vertices: []
       indices: 
       edges: []
@@ -315,30 +315,9 @@ TextureImporter:
       name: blythe-2_9
       rect:
         serializedVersion: 2
-        x: 1514
-        y: 2060
-        width: 1724
-        height: 2098
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0ee50cd86018e4b9097d61aad0fb2f49
-      internalID: -852736853
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blythe-2_10
-      rect:
-        serializedVersion: 2
-        x: 3190
-        y: 2097
-        width: 1627
+        x: 1671
+        y: 2121
+        width: 1507
         height: 2013
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -347,40 +326,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d18f3257b5abd4c219a25e3896cc207f
-      internalID: -591489978
+      spriteID: 083a41ae5d2bf40bcac635ad772d76e3
+      internalID: 687636910
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blythe-2_11
+      name: blythe-2_10
       rect:
         serializedVersion: 2
-        x: 4890
-        y: 2072
-        width: 1555
-        height: 2050
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3a31ecb4590046129e42a3d97d5f94f
-      internalID: 1538370528
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blythe-2_12
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 143
-        width: 1683
+        x: 3226
+        y: 2109
+        width: 1712
         height: 1929
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -389,8 +347,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79ea0d0a387a741aeaa41a25f2807019
-      internalID: -499702847
+      spriteID: c80140710f26e4af69a580756c2ca58f
+      internalID: -329838428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blythe-2_11
+      rect:
+        serializedVersion: 2
+        x: 4866
+        y: 2157
+        width: 1543
+        height: 1929
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8df243881753446a849d905438b3c82
+      internalID: 1504094924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blythe-2_12
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 119
+        width: 1664
+        height: 1941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f0897793e8746acb183bd49d5f316e
+      internalID: 1118276776
       vertices: []
       indices: 
       edges: []
@@ -399,10 +399,10 @@ TextureImporter:
       name: blythe-2_13
       rect:
         serializedVersion: 2
-        x: 1731
-        y: 71
-        width: 1423
-        height: 1977
+        x: 1707
+        y: 47
+        width: 1507
+        height: 2050
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,8 +410,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d7b126ec6c5d475f9805d42e217044d
-      internalID: 1420108974
+      spriteID: 4a84c275e72294735a33e0f5e387b2f6
+      internalID: 974235493
       vertices: []
       indices: 
       edges: []
@@ -419,7 +419,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ea1490668d90743678b45195aa5bd621
+    spriteID: 1069fa052052a4fcbae40a7023bc69e8
     internalID: 0
     vertices: []
     indices: 
@@ -427,20 +427,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      blythe-2_0: 294129676
-      blythe-2_1: 567459344
-      blythe-2_10: -591489978
-      blythe-2_11: 1538370528
-      blythe-2_12: -499702847
-      blythe-2_13: 1420108974
-      blythe-2_2: 1890969511
-      blythe-2_3: -1991800058
-      blythe-2_4: 1031120373
-      blythe-2_5: 2051126824
-      blythe-2_6: -641419316
-      blythe-2_7: 1973028208
-      blythe-2_8: 924234778
-      blythe-2_9: -852736853
+      blythe-2_0: -1535332986
+      blythe-2_1: -446799320
+      blythe-2_10: -329838428
+      blythe-2_11: 1504094924
+      blythe-2_12: 1118276776
+      blythe-2_13: 974235493
+      blythe-2_2: -461938542
+      blythe-2_3: -1142271953
+      blythe-2_4: 1521865065
+      blythe-2_5: 441038938
+      blythe-2_6: 1248866952
+      blythe-2_7: -705359222
+      blythe-2_8: 1772161198
+      blythe-2_9: 687636910
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

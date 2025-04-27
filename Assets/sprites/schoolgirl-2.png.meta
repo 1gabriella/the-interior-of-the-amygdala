@@ -126,10 +126,10 @@ TextureImporter:
       name: schoolgirl-2_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 1681
-        width: 1169
-        height: 1480
+        x: 0
+        y: 1652
+        width: 1085
+        height: 1489
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ea8f76f846de4d9a9e8757575ada779
-      internalID: -178005911
+      spriteID: d7a58badb4a444e479eea6382abf0f3e
+      internalID: 399197947
       vertices: []
       indices: 
       edges: []
@@ -147,10 +147,10 @@ TextureImporter:
       name: schoolgirl-2_1
       rect:
         serializedVersion: 2
-        x: 1169
-        y: 1686
-        width: 907
-        height: 1504
+        x: 1075
+        y: 1671
+        width: 982
+        height: 1470
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a64f7863eb6da4c5b99a641642ffa015
-      internalID: 201284335
+      spriteID: 9e9ca0e9836dc4122a95009efdd89749
+      internalID: -1948680976
       vertices: []
       indices: 
       edges: []
@@ -168,10 +168,10 @@ TextureImporter:
       name: schoolgirl-2_2
       rect:
         serializedVersion: 2
-        x: 2091
-        y: 1721
-        width: 1070
-        height: 1499
+        x: 2086
+        y: 1681
+        width: 1080
+        height: 1494
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db48da3facc0347c0baedc3e7a1c0866
-      internalID: 1095654140
+      spriteID: 702a68d3371f74959855d4c00edcf335
+      internalID: -2109035411
       vertices: []
       indices: 
       edges: []
@@ -189,10 +189,10 @@ TextureImporter:
       name: schoolgirl-2_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 29
-        width: 1203
-        height: 1519
+        x: 15
+        y: 0
+        width: 1060
+        height: 1489
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbcd7c2e7336f4c76b549e3063fd2aff
-      internalID: 766604592
+      spriteID: 111b770ec5c724aebacb882c65179020
+      internalID: 1326376888
       vertices: []
       indices: 
       edges: []
@@ -210,10 +210,10 @@ TextureImporter:
       name: schoolgirl-2_4
       rect:
         serializedVersion: 2
-        x: 1179
-        y: 4
-        width: 1060
-        height: 1574
+        x: 1095
+        y: 19
+        width: 962
+        height: 1504
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1005bdc720021423bb5d238d7688a881
-      internalID: 798586239
+      spriteID: 606bf1be42ec2445a97fde5f4871a747
+      internalID: 930709788
       vertices: []
       indices: 
       edges: []
@@ -231,10 +231,10 @@ TextureImporter:
       name: schoolgirl-2_5
       rect:
         serializedVersion: 2
-        x: 2244
-        y: 34
-        width: 937
-        height: 1563
+        x: 2076
+        y: 19
+        width: 1105
+        height: 1524
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2149e642230cd4c78907e89318e555a9
-      internalID: -1440354463
+      spriteID: ec9513d21ed5140cd8ee40f4eb92f74e
+      internalID: 237168592
       vertices: []
       indices: 
       edges: []
@@ -251,7 +251,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0fc0e7e589f2747fda0cb8284379281c
+    spriteID: ab488236ab56a4baf8f66f2370dcb942
     internalID: 0
     vertices: []
     indices: 
@@ -259,12 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      schoolgirl-2_0: -178005911
-      schoolgirl-2_1: 201284335
-      schoolgirl-2_2: 1095654140
-      schoolgirl-2_3: 766604592
-      schoolgirl-2_4: 798586239
-      schoolgirl-2_5: -1440354463
+      schoolgirl-2_0: 399197947
+      schoolgirl-2_1: -1948680976
+      schoolgirl-2_2: -2109035411
+      schoolgirl-2_3: 1326376888
+      schoolgirl-2_4: 930709788
+      schoolgirl-2_5: 237168592
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

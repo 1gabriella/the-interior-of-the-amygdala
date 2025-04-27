@@ -126,10 +126,10 @@ TextureImporter:
       name: pony-2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 829
-        width: 838
-        height: 847
+        x: 4
+        y: 812
+        width: 783
+        height: 866
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79c5295abceb344a083bb2640c43a5d8
-      internalID: -464527456
+      spriteID: a790a94406269423398ad979f35830f5
+      internalID: -309945126
       vertices: []
       indices: 
       edges: []
@@ -147,10 +147,10 @@ TextureImporter:
       name: pony-2_1
       rect:
         serializedVersion: 2
-        x: 828
-        y: 832
-        width: 727
-        height: 844
+        x: 784
+        y: 805
+        width: 803
+        height: 854
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a55efcee109f42e0b37ddcaccda1568
-      internalID: -961500334
+      spriteID: 490f2e2fe7eff4ab894c5c7f0437773d
+      internalID: 428641378
       vertices: []
       indices: 
       edges: []
@@ -168,10 +168,10 @@ TextureImporter:
       name: pony-2_2
       rect:
         serializedVersion: 2
-        x: 1557
-        y: 854
-        width: 796
-        height: 824
+        x: 0
+        y: 10
+        width: 711
+        height: 795
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8dbb229b9f284c1992147def937927c
-      internalID: 218005480
+      spriteID: ee9d7145068ee48ffbcde1d97d6efdd5
+      internalID: 1057563162
       vertices: []
       indices: 
       edges: []
@@ -189,10 +189,10 @@ TextureImporter:
       name: pony-2_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 19
-        width: 772
-        height: 815
+        x: 723
+        y: 12
+        width: 915
+        height: 788
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01b44c65fbb5349308681172dc2663c2
-      internalID: -294895606
+      spriteID: 97270020e8f674982b90028cb9834da3
+      internalID: 1781452130
       vertices: []
       indices: 
       edges: []
@@ -210,10 +210,10 @@ TextureImporter:
       name: pony-2_4
       rect:
         serializedVersion: 2
-        x: 774
-        y: 7
-        width: 857
-        height: 825
+        x: 1616
+        y: 839
+        width: 745
+        height: 829
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ea634a9dd262415a985a6cf82f8e721
-      internalID: 1319970117
+      spriteID: c6b49710197e74c02b93b1fbdf484ee8
+      internalID: -1060452222
       vertices: []
       indices: 
       edges: []
@@ -231,10 +231,10 @@ TextureImporter:
       name: pony-2_5
       rect:
         serializedVersion: 2
-        x: 1650
-        y: 0
-        width: 711
-        height: 844
+        x: 1663
+        y: 19
+        width: 690
+        height: 788
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b2b20f5c7ab74ad9b7978c3015a788d
-      internalID: 1984856345
+      spriteID: be3bac72efcd94d59ba916137eb5f98f
+      internalID: 1393585139
       vertices: []
       indices: 
       edges: []
@@ -251,7 +251,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 799f89469e473476e921788fb7b024a5
+    spriteID: a3605644f9d1848f79209b41b3d0e8bf
     internalID: 0
     vertices: []
     indices: 
@@ -259,12 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      pony-2_0: -464527456
-      pony-2_1: -961500334
-      pony-2_2: 218005480
-      pony-2_3: -294895606
-      pony-2_4: 1319970117
-      pony-2_5: 1984856345
+      pony-2_0: -309945126
+      pony-2_1: 428641378
+      pony-2_2: 1057563162
+      pony-2_3: 1781452130
+      pony-2_4: -1060452222
+      pony-2_5: 1393585139
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
