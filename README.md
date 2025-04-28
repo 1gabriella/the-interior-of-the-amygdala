@@ -1,6 +1,6 @@
 # The Interior of the Amygdala
 
-A Virtual Reality experience built in Unity, showcasing interactive environments, AI-driven chatbots, emotion detection, audio-reactive visuals, and a mini-map system. Versioned with Git and using Git Large File Storage (LFS) for large assets.
+A Virtual Reality experience built in Unity, showcasing interactive environments, AI-driven chatbots, emotion detection, audio-reactive visuals, and a mini-map system.
 
 ---
 
