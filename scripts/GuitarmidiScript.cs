@@ -9,17 +9,17 @@ using System;
 
 public class SimpleMidiPlayer : MonoBehaviour
 {
-    [Tooltip("Relative path to the MIDI file (e.g., Assets/Midi/song.mid)")]
+ 
     public string midiFilePath = "Assets/Midi/song.mid";
 
-    [Tooltip("The AudioSource component that will play the audio sample. Its AudioClip should be your instrument sound recorded at a base pitch.")]
+
     public AudioSource audioSource;
 
-    [Tooltip("The base MIDI note number corresponding to the AudioClip’s pitch (e.g., 60 for Middle C)")]
+
     public int baseMidiNote = 60;
 
-    // Optional multiplier if you want to adjust the recorded pitch further.
-    [Tooltip("Additional pitch multiplier (default 1 means no change)")]
+ 
+
     public float basePitch = 1.0f;
 
     private IEnumerable<Note> midiNotes;
@@ -58,7 +58,7 @@ public class SimpleMidiPlayer : MonoBehaviour
 
             // Calculate pitch shift:
             // When the MIDI note equals baseMidiNote, pitchShift should be 1 (no change).
-            // For each semitone, the pitch multiplier is the 12th root of 2 (approximately 1.0595).
+           
             float pitchShift = Mathf.Pow(2f, (midiNoteNumber - baseMidiNote) / 12f);
 
             // Play the sample with the computed pitch shift.
