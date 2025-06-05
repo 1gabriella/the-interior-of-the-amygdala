@@ -58,10 +58,7 @@ public class MinimapSystem : MonoBehaviour
         );
     }
 
-    /// <summary>
-    /// Toggle the minimap's visibility on or off.
-    /// Called via the UI button's OnClick event.
-    /// </summary>
+ 
     public void ToggleMap()
     {
         mapVisible = !mapVisible;
