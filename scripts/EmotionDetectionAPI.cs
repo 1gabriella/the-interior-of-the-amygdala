@@ -36,11 +36,6 @@ public class EmotionDetectionAPI : MonoBehaviour
         apiKey = key; // Store the provided token
     }
 
-    /// <summary>
-    /// Public entry point: submit text to detect emotion.
-    /// onSuccess will receive the top emotion label,
-    /// onError will receive an error message if something goes wrong.
-    /// </summary>
     public void DetectEmotion(string text, Action<string> onSuccess, Action<string> onError)
     {
         // Ensure we have a token before attempting the request
@@ -133,12 +128,10 @@ public class EmotionDetectionAPI : MonoBehaviour
         onSuccess?.Invoke(best.label); // Return the top label
     }
 
-    // Helper class for JsonUtility to serialize the request
-    [Serializable]
+    
     private class TextRequest { public string text; }
 
-    // Represents one emotion entry from the API response
-    [Serializable]
+
     private class Emotion
     {
         public string label; // e.g. "joy", "sadness"
