@@ -32,11 +32,11 @@ public class FlipPhoneChatXR : MonoBehaviour
             keyboardDisplay.onTextSubmitted.AddListener(OnTextSubmitted);
         }
 
-        // Initial Friend message
+ 
         AppendLog("<b>Friend:</b> do u miss early justin beiber");
         history.Add("Friend: do u miss early justin beiber");
 
-        // Open the keyboard for the user
+   
         inputField.ActivateInputField();
     }
 
@@ -61,11 +61,11 @@ public class FlipPhoneChatXR : MonoBehaviour
 
     private IEnumerator SendToHuggingFace()
     {
-        // Keep last 6 entries (3 exchanges) to maintain context
+   
         if (history.Count > 6)
             history = history.GetRange(history.Count - 6, 6);
 
-        // Build improved prompt for richer replies
+    
         var sb = new StringBuilder();
         sb.AppendLine("You are a 2000s girl texting on a flip-phone to a friend . Reply in a nostalgic, fun style talk about music, clubbing, Jeresey Shore  etc.");
         sb.AppendLine("Ensure your reply is between 3 and 6 words, using 2000s slang.");
@@ -75,13 +75,13 @@ public class FlipPhoneChatXR : MonoBehaviour
         sb.Append("Friend:");
         string prompt = sb.ToString();
 
-        // Escape for JSON
+      
         string esc = prompt
             .Replace("\\", "\\\\")
             .Replace("\"", "\\\"")
             .Replace("\n", "\\n");
 
-        // Build JSON payload
+       
         string json = "{"
             + "\"inputs\":\"" + esc + "\"," 
             + "\"parameters\":{"
@@ -129,7 +129,7 @@ public class FlipPhoneChatXR : MonoBehaviour
                 if (words.Count > 6)
                     words = words.GetRange(0, 6);
 
-                // Random slang fillers for padding and variation
+             
                 var fillers = new[] {"omg", "lol", "<3", "haha", "yeet", "tbh", "rad", "epic"};
                 // Randomly insert or append fillers until >= 3 words
                 while (words.Count < 3)
