@@ -30,18 +30,13 @@ public class EmotionDetectionAPI : MonoBehaviour
     private string ApiUrl => $"https://api-inference.huggingface.co/models/{modelId}";
 
 
-    /// <summary>
-    /// Call this from other scripts if you want to set the API key at runtime.
-    /// </summary>
+
     public void SetApiKey(string key)
     {
         apiKey = key.Trim();
     }
 
-    /// <summary>
-    /// Starts the emotion detection process. 
-    /// onSuccess is invoked with the top emotion label, onError with any error message.
-    /// </summary>
+
     public void DetectEmotion(string text, Action<string> onSuccess, Action<string> onError)
     {
         if (string.IsNullOrWhiteSpace(apiKey))
@@ -53,9 +48,7 @@ public class EmotionDetectionAPI : MonoBehaviour
         StartCoroutine(SendRequest(text, onSuccess, onError));
     }
 
-    /// <summary>
-    /// Sends the text to the Hugging Face model. Retries once if the model is still loading (503).
-    /// </summary>
+   
     private IEnumerator SendRequest(string text, Action<string> onSuccess, Action<string> onError, int attempt = 1)
     {
         // Prepare JSON: {"text": "your input"}
@@ -137,7 +130,7 @@ public class EmotionDetectionAPI : MonoBehaviour
         onSuccess?.Invoke(bestEmotion.label);
     }
 
-    // Simple classes to match the HF JSON structure
+    
     [Serializable]
     private class TextPayload
     {
