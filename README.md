@@ -32,9 +32,7 @@ A Virtual Reality experience built in Unity, showcasing interactive environments
 ## 🎯 Prerequisites
 
 - **Unity**: 2021.3 LTS or newer  
-- **.NET** Scripting Runtime: .NET 4.x Equivalent  
-- **Git** v2.28+ with **Git LFS** installed  
-- **Android SDK & NDK** (for Oculus Quest builds)  
+- **Android SDK  (for Oculus Quest builds)  
 - **Unity Packages** (via Package Manager):  
   - XR Interaction Toolkit  
   - Oculus XR Plugin  
@@ -57,11 +55,6 @@ git lfs pull
 
 1. **Add project to Unity Hub**  
    - In Unity Hub: **Add** → select the project folder  
-
-2. **Configure Asset Serialization**  
-   - In **Project Settings → Editor**:  
-     - Enable **Visible Meta Files**  
-     - Set **Asset Serialization** to **Force Text**  
 
 
 
