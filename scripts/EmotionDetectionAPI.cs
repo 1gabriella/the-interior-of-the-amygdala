@@ -1,147 +1,160 @@
 // ===============================================
-// Influences:
-// - HTTP communication via UnityWebRequest and handlers
-// - Asynchronous task management using Coroutines (IEnumerator + StartCoroutine)
-// - Pattern for Model inference calls inspired by Hugging Face Inference API
-// - JSON serialization/deserialization with UnityEngine.JsonUtility
-// - Use of System.Action<T> delegates for callback handling
-// - C# coding conventions and Unity style best practices
+// Inspired by:
+// - UnityWebRequest for sending HTTP requests
+// - Coroutines (IEnumerator + StartCoroutine) for handling async work
+// - Hugging Face Inference API patterns for model calls
+// - UnityEngine.JsonUtility for JSON (de)serialization
+// - C# Action<T> callbacks for passing results/errors
 // ===============================================
 using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 
-// This MonoBehaviour handles communication with the Hugging Face emotion detection model.
-// It sends text payloads and parses the returned emotion scores.
+/// <summary>
+/// Sends text to a Hugging Face emotion-detection model and returns the predicted label.
+
+/// </summary>
 public class EmotionDetectionAPI : MonoBehaviour
 {
-    [Header("Hugging Face")]
-    [Tooltip("Your HF Inference API token")]
+    [Header("Hugging Face Settings")]
+    [Tooltip("Your API token for Hugging Face inference.")]
     [SerializeField]
-    private string apiKey; // Store your inference API token here via the Inspector or SetApiKey()
+    private string apiKey;
 
-    [Tooltip("The model to call, e.g. j-hartmann/emotion-english-distilroberta-base")]
+    [Tooltip("Model endpoint, e.g. 'j-hartmann/emotion-english-distilroberta-base'.")]
     [SerializeField]
-    private string modelId = "j-hartmann/emotion-english-distilroberta-base"; // Default model endpoint
+    private string modelId = "j-hartmann/emotion-english-distilroberta-base";
 
-    // Construct the full API URL based on the chosen model
+    // Builds the full URL to the inference endpoint based on modelId
     private string ApiUrl => $"https://api-inference.huggingface.co/models/{modelId}";
 
+
     /// <summary>
-    /// Allows other scripts (like SpeechRecognitionTest) to set the API key at runtime.
+    /// Call this from other scripts if you want to set the API key at runtime.
     /// </summary>
     public void SetApiKey(string key)
     {
-        apiKey = key; // Store the provided token
+        apiKey = key.Trim();
     }
 
+    /// <summary>
+    /// Starts the emotion detection process. 
+    /// onSuccess is invoked with the top emotion label, onError with any error message.
+    /// </summary>
     public void DetectEmotion(string text, Action<string> onSuccess, Action<string> onError)
     {
-        // Ensure we have a token before attempting the request
         if (string.IsNullOrWhiteSpace(apiKey))
         {
-            onError?.Invoke("No API key set: please paste your HF token in the Inspector or use SetApiKey().");
+            onError?.Invoke("API key is missing. Please set it in the Inspector or call SetApiKey().");
             return;
         }
 
-        // Start the coroutine to send the HTTP request
         StartCoroutine(SendRequest(text, onSuccess, onError));
     }
 
-    // Coroutine to perform the HTTP POST to the HF inference endpoint
+    /// <summary>
+    /// Sends the text to the Hugging Face model. Retries once if the model is still loading (503).
+    /// </summary>
     private IEnumerator SendRequest(string text, Action<string> onSuccess, Action<string> onError, int attempt = 1)
     {
-        // Prepare the JSON payload (simple { "text": "..." })
-        var requestData = new TextRequest { text = text };
-        string payload = JsonUtility.ToJson(requestData);
-        Debug.Log($"[EmotionAPI] Payload: {payload}");
+        // Prepare JSON: {"text": "your input"}
+        var requestBody = new TextPayload { text = text };
+        string json = JsonUtility.ToJson(requestBody);
+        Debug.Log($"[EmotionAPI] Sending payload: {json}");
 
-        // Create the UnityWebRequest for a JSON POST
-        using var req = new UnityWebRequest(ApiUrl, "POST")
+        using var request = new UnityWebRequest(ApiUrl, "POST")
         {
-            uploadHandler   = new UploadHandlerRaw(System.Text.Encoding.UTF8.GetBytes(payload)),
+            uploadHandler   = new UploadHandlerRaw(System.Text.Encoding.UTF8.GetBytes(json)),
             downloadHandler = new DownloadHandlerBuffer()
         };
-        req.SetRequestHeader("Content-Type",  "application/json");
-        req.SetRequestHeader("Authorization", "Bearer " + apiKey);
-        req.SetRequestHeader("x-wait-for-model", "true"); // Wait if model is still loading
+        request.SetRequestHeader("Content-Type",  "application/json");
+        request.SetRequestHeader("Authorization", "Bearer " + apiKey);
+        request.SetRequestHeader("x-wait-for-model", "true"); // Wait if the model is still warming up
 
-        yield return req.SendWebRequest(); // Actually send it and wait
+        yield return request.SendWebRequest();
 
-        string responseBody = req.downloadHandler?.text;
-        Debug.Log($"[EmotionAPI] HTTP {req.responseCode}: {responseBody}");
+        string responseText = request.downloadHandler?.text;
+        Debug.Log($"[EmotionAPI] HTTP {(int)request.responseCode}: {responseText}");
 
-        // If the service is loading, retry once after a short wait
-        if (req.responseCode == 503 && attempt < 2)
+        // If the model is not ready yet, try one more time after 1 second
+        if (request.responseCode == 503 && attempt < 2)
         {
-            Debug.LogWarning("[EmotionAPI] Service unavailable (503), retrying in 1s...");
+            Debug.LogWarning("[EmotionAPI] Model still loading (503). Retrying in 1 second...");
             yield return new WaitForSeconds(1f);
             StartCoroutine(SendRequest(text, onSuccess, onError, attempt + 1));
             yield break;
         }
 
-        // Handle HTTP errors: bad request, auth issues, forbidden, etc.
-        if (req.result != UnityWebRequest.Result.Success)
+        // Handle HTTP errors
+        if (request.result != UnityWebRequest.Result.Success)
         {
-            switch (req.responseCode)
+            switch (request.responseCode)
             {
                 case 400:
-                    onError?.Invoke($"Bad request (400): {responseBody}");
+                    onError?.Invoke($"Bad request (400): {responseText}");
                     break;
                 case 401:
-                    onError?.Invoke("Auth failed: check your API key in the Inspector or via SetApiKey().");
+                    onError?.Invoke("Authentication failed (401). Check your API key.");
                     break;
                 case 403:
-                    onError?.Invoke($"Access forbidden: your token may lack permission for model '{modelId}'.");
+                    onError?.Invoke($"Access forbidden (403). Your API key may not have permission for '{modelId}'.");
                     break;
                 default:
-                    onError?.Invoke($"API Error ({req.responseCode}): {req.error}");
+                    onError?.Invoke($"Error {(int)request.responseCode}: {request.error}");
                     break;
             }
             yield break;
         }
 
-        // Hugging Face returns an array of {label,score}, so wrap for JsonUtility
-        var wrapped = "{\"data\":" + responseBody + "}";
-        var wrapper = JsonUtility.FromJson<EmotionArray>(wrapped);
+        // Hugging Face returns an array of { "label": "...", "score": ... }
+    
+        var wrappedJson = "{\"data\":" + responseText + "}";
+        var parsed = JsonUtility.FromJson<EmotionArray>(wrappedJson);
 
-        // If no data returned, forward an error
-        if (wrapper?.data == null || wrapper.data.Length == 0)
+        if (parsed?.data == null || parsed.data.Length == 0)
         {
-            onError?.Invoke("No emotion data returned.");
+            onError?.Invoke("No emotion data received from the model.");
             yield break;
         }
 
-        // Log all detected emotions for debugging
-        Debug.Log($"[EmotionAPI] Parsed {wrapper.data.Length} emotions:");
-        foreach (var emo in wrapper.data)
-            Debug.Log($"[EmotionAPI]   {emo.label}: {emo.score}");
+        // Log the received emotions
+        Debug.Log($"[EmotionAPI] Received {parsed.data.Length} labels:");
+        foreach (var e in parsed.data)
+        {
+            Debug.Log($"  {e.label}: {e.score}");
+        }
 
-        // Find the highest-scoring emotion
-        var best = wrapper.data[0];
-        for (int i = 1; i < wrapper.data.Length; i++)
-            if (wrapper.data[i].score > best.score)
-                best = wrapper.data[i];
+        // Find the emotion with the highest score
+        var bestEmotion = parsed.data[0];
+        foreach (var e in parsed.data)
+        {
+            if (e.score > bestEmotion.score)
+                bestEmotion = e;
+        }
 
-        Debug.Log($"[EmotionAPI] Best emotion: {best.label} ({best.score})");
-        onSuccess?.Invoke(best.label); // Return the top label
+        Debug.Log($"[EmotionAPI] Top emotion: {bestEmotion.label} (score {bestEmotion.score})");
+        onSuccess?.Invoke(bestEmotion.label);
     }
 
-    
-    private class TextRequest { public string text; }
+    // Simple classes to match the HF JSON structure
+    [Serializable]
+    private class TextPayload
+    {
+        public string text;
+    }
 
-
+    [Serializable]
     private class Emotion
     {
-        public string label; // e.g. "joy", "sadness"
-        public float score;  // confidence from 0.0 to 1.0
+        public string label;
+        public float score;
     }
 
-    // Wrapper for the array of Emotion objects
     [Serializable]
     private class EmotionArray
     {
         public Emotion[] data;
     }
 }
+
