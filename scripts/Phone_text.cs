@@ -114,7 +114,7 @@ public class FlipPhoneChatXR : MonoBehaviour
             }
             else
             {
-                // Extract and trim reply to 3-6 words with more variation
+             
                 string full = wrapper.arr[0].generated_text;
                 int idx = full.LastIndexOf("Friend:") + "Friend:".Length;
                 var body = (idx > 0 && idx < full.Length)
@@ -138,7 +138,7 @@ public class FlipPhoneChatXR : MonoBehaviour
                     words.Insert(pos, fillers[UnityEngine.Random.Range(0, fillers.Length)]);
                 }
 
-                // Chance to sprinkle an extra slang word if under 6 words
+
                 if (words.Count < 6 && UnityEngine.Random.value < 0.5f)
                     words.Insert(UnityEngine.Random.Range(0, words.Count + 1), fillers[UnityEngine.Random.Range(0, fillers.Length)]);
 
