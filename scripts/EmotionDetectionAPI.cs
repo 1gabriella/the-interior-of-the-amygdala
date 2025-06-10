@@ -7,7 +7,7 @@
 //
 // - The coroutine pattern (IEnumerator + StartCoroutine) for asynchronous workflows follows Unity’s official coroutine documentation:
 //   https://docs.unity3d.com/Manual/Coroutines.html
-//
+//https://huggingface.co/docs/transformers/v4.17.0/preprocessing
 // - JSON (de)serialization using UnityEngine.JsonUtility, and the technique of wrapping array responses for successful parsing, is informed by this Unity tutorial:
 //   https://gamedevbeginner.com/json-and-unity-how-to-savetoload-your-game-data/
 //
