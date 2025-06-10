@@ -9,6 +9,8 @@
 // - UI feedback patterns using TextMeshPro and UnityEngine.UI.Button
 // - Event-driven input handling via Button.onClick listeners
 // - Error-handling and retry logic inspired by resilient network programming
+//https://docs.unity3d.com/Manual/AudioFiles.html
+//https://stackoverflow.com/questions/14659684/creating-a-wav-file-in-c-sharp
 // ===============================================
 
 using System;
