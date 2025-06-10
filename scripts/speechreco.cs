@@ -1,16 +1,13 @@
 // ===============================================
 // Influences & Inspirations:
-// - UnityEngine.Microphone API for capturing real-time audio input
-// - Hugging Face Inference API patterns for long-poll ASR requests
-// - UnityWebRequest with raw audio payloads for HTTP multipart
-// - Coroutines (IEnumerator + StartCoroutine) for asynchronous workflows
-// - JsonUtility for parsing JSON transcription responses
-// - MemoryStream & BinaryWriter for WAV encoding of PCM samples
-// - UI feedback patterns using TextMeshPro and UnityEngine.UI.Button
-// - Event-driven input handling via Button.onClick listeners
-// - Error-handling and retry logic inspired by resilient network programming
-//https://docs.unity3d.com/Manual/AudioFiles.html
-//https://stackoverflow.com/questions/14659684/creating-a-wav-file-in-c-sharp
+// - Unity Scripting API: Microphone: https://docs.unity3d.com/ScriptReference/Microphone.html
+// - Unity Scripting API: AudioClip: https://docs.unity3d.com/ScriptReference/AudioClip.html
+// - Unity Scripting API: UnityWebRequest.POST: https://docs.unity3d.com/ScriptReference/UnityWebRequest.post.html
+// - Unity Scripting API: JsonUtility: https://docs.unity3d.com/ScriptReference/JsonUtility.html
+// - Microsoft Docs: MemoryStream Class: https://learn.microsoft.com/en-us/dotnet/api/system.io.memorystream
+// - Microsoft Docs: BinaryWriter Class: https://learn.microsoft.com/en-us/dotnet/api/system.io.binarywriter
+// - RIFF (Resource Interchange File Format) WAV Specification (for manual WAV header construction): General understanding from resources like http://soundfile.sapp.org/doc/WaveFormat/
+// - Hugging Face Inference API Documentation (general request/response patterns for ASR models): https://huggingface.co/docs/api-inference/detailed_parameters#automatic-speech-recognition-asr
 // ===============================================
 
 using System;
