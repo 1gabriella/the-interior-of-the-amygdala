@@ -1,11 +1,26 @@
 // ===============================================
-// Inspired by:
-// - UnityWebRequest for sending HTTP requests
-// - Coroutines (IEnumerator + StartCoroutine) for handling async work
-// - Hugging Face Inference API patterns for model calls
-// - UnityEngine.JsonUtility for JSON (de)serialization
-// - C# Action<T> callbacks for passing results/errors
-// ===============================================
+// Utilised by:
+// This script was developed by referencing and combining multiple publicly available Unity and API integration examples:
+// 
+// - The structure for sending JSON via POST using UnityWebRequest in a coroutine was adapted from this Unity-focused blog:
+//   https://blog.csdn.net/weixin_38484443/article/details/117434855
+//
+// - The coroutine pattern (IEnumerator + StartCoroutine) for asynchronous workflows follows Unity’s official coroutine documentation:
+//   https://docs.unity3d.com/Manual/Coroutines.html
+//
+// - JSON (de)serialization using UnityEngine.JsonUtility, and the technique of wrapping array responses for successful parsing, is informed by this Unity tutorial:
+//   https://gamedevbeginner.com/json-and-unity-how-to-savetoload-your-game-data/
+//
+// - The use of C# Action<T> delegates for success and error callbacks is based on Microsoft’s documentation and Unity event handling practices:
+//   https://learn.microsoft.com/en-us/dotnet/api/system.action-1
+//
+// - Retry-on-503 logic (with WaitForSeconds and recursive coroutine calls) is custom logic inspired by patterns discussed on Unity forums and general resilient API request techniques:
+//
+//   (e.g. retry discussion: https://forum.unity.com/threads/simple-retry-logic-for-unitywebrequest.1025994/)
+//
+// - API integration details like sending an "Authorization: Bearer" header and using "x-wait-for-model" are derived from Hugging Face’s Unity API usage and documentation:
+//   https://huggingface.co/docs/api-inference/index
+//   https://github.com/huggingface/unity-api
 using System;
 using System.Collections;
 using UnityEngine;
