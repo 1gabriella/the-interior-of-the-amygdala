@@ -1,5 +1,8 @@
 //utilising https://github.com/robksawyer/Unity-Live-Input-FFT-Analysis 
 //https://medium.com/@simon.swartout/audio-reactive-visuals-in-unity-built-in-approach-part-1-2-ffca389c31c8
+//https://github.com/melanchall/drywetmidi/discussions/201
+//https://docs.unity3d.com/560/Documentation/ScriptReference/WaitForSeconds.html
+//https://melanchall.github.io/drywetmidi/articles/high-level-managing/Time-and-length.html
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
