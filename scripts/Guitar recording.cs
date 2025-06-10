@@ -1,13 +1,31 @@
 // ===============================================
 // Influences & Inspirations:
-// - UnityEngine.Microphone API for real-time audio capture
-// - Audio spectrum analysis via FFT (Fast Fourier Transform)
-// - Valence/Arousal mapping inspired by music emotion research
-// - XR Interaction Toolkit for hover-based input events
-// - UnityEngine.Mathf.Lerp for smoothing signals over time
-// - TextMeshPro for in-game text feedback
-// - Coroutine patterns for asynchronous audio initialization
-// - C# event-driven architecture using UnityEvent listeners
+// - Real-time audio recording via UnityEngine.Microphone API was implemented using guidance from Unity’s official documentation and Unity Answers threads:
+//   https://docs.unity3d.com/ScriptReference/Microphone.html
+//
+// - FFT-based audio spectrum analysis for music emotion mapping was informed by community examples and this Unity spectrum tutorial:
+//   https://johnleonardfrench.com/audio-visualisation-unity-fft/
+//   https://gamedev.stackexchange.com/questions/140128/unity-spectrumdata-spectral-centroid
+//
+// - The emotional mapping of arousal and valence from audio was conceptually inspired by music emotion research, particularly circumplex models of affect:
+//   https://en.wikipedia.org/wiki/Valence_(psychology)  
+//   https://www.frontiersin.org/articles/10.3389/fpsyg.2021.655669/full
+//
+// - XR input handling using XR Interaction Toolkit and hover events follows Unity’s official toolkit examples and scripting guides:
+//   https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.3/manual/index.html
+//
+// - Use of Mathf.Lerp for smoothing FFT and RMS data over time aligns with Unity best practices for real-time signal smoothing:
+//   https://docs.unity3d.com/ScriptReference/Mathf.Lerp.html
+//
+// - In-game text feedback via TextMeshPro and XR UI updates was based on Unity's TMP docs and examples from XR UI implementations:
+//   https://docs.unity3d.com/Packages/com.unity.textmeshpro@3.0/manual/index.html
+//
+// - Coroutine use for delayed microphone playback was influenced by Unity’s coroutine architecture and examples from mic initialization handling:
+//   https://answers.unity.com/questions/1686574/unity-microphone-api-problem-when-audio-starts.htm
+//
+// - UnityEvent-based architecture for XR input binding was used following standard event-driven patterns in Unity:
+//   https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html
+// ===============================================
 // ===============================================
 
 using System.Collections;
