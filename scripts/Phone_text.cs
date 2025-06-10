@@ -1,3 +1,9 @@
+// https://github.com/huggingface/unity-api
+//https://developers.meta.com/horizon/documentation/unity/voice-sdk-tutorials-3/
+// https://git.gti.ssr.upm.es/mgm/ModelosEscalera/-/tree/TerapiaEscalerasOculusSDK/Library/PackageCache/com.unity.xr.interaction.toolkit@2.0.1/Documentation~?ref_type=heads
+//https://git.gti.ssr.upm.es/mgm/ModelosEscalera/-/tree/TerapiaEscalerasOculusSDK/Library/PackageCache/com.unity.xr.interaction.toolkit@2.0.1/Documentation~?ref_type=heads
+//https://github.com/Cysharp/ZLinq
+//https://yang-su2000.github.io/Voice2Action/
 using System;
 using System.Collections;
 using System.Collections.Generic;
